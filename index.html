@@ -9,6 +9,15 @@
 <title>Apresentação Lalo Araújo</title>
 
 <style>
+
+.datetime-bar {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  text-align: center;
+  font-size: 12px;
+}
+
+
   body {
     font-family: 'Comfortaa', cursive;
     margin: 0;
@@ -99,6 +108,9 @@
 </style>
 </head>
 <body>
+  <div class="datetime-bar">
+    <p id="local-datetime"></p>
+  </div>
   <br><br><br><br><br><br><br><br><br><br><br>
   <div class="container">
     <div class="translucent-div">
@@ -141,5 +153,16 @@
   </div>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script>
+    function updateDateTime() {
+      const dateTimeElement = document.getElementById('local-datetime');
+      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', timeZoneName: 'short' };
+      const localDateTime = new Date().toLocaleDateString('pt-BR', options);
+      dateTimeElement.textContent = "Hoje é " + localDateTime;
+    }
+  
+    setInterval(updateDateTime, 1000); // Atualizar a cada segundo
+  </script>
+  
 </body>
 </html>
