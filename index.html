@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+<title>Apresentação Lalo Araújo</title>
+
+<style>
+  body {
+    font-family: 'Comfortaa', cursive;
+    margin: 0;
+    padding: 0;
+    background-image: url('background.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .container {
+    display: flex;
+    align-items:center;
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: rgba(128, 139, 150, 0.8);
+
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .translucent-div {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 20px;
+    text-align: left;
+    border-radius: 10px 0 0 10px;
+    flex: 1;
+  }
+
+  .profile-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .content-column {
+    flex: 1;
+    padding: 20px;
+    border-radius: 0 10px 10px 0;
+  }
+
+  .footer {
+    font-size: 12px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+    margin-top: auto; /* Adicione essa linha para posicionar o footer no final do container */
+  }
+
+  .programming-languages li {
+    display: flex;
+    align-items: center; /* Alinhar verticalmente as imagens */
+    margin-bottom: 5px; /* Adicionar espaço entre as linguagens */
+}
+
+  .social {
+    display: flex;
+    align-items: center; /* Alinhar verticalmente as imagens */
+    margin-bottom: 5px; /* Adicionar espaço entre as linguagens */
+  }
+
+  .text-below-image {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 24px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  a {
+  color: inherit; /* Herda a cor do elemento pai (nesse caso, texto normal) */
+  text-decoration: none; /* Remove o sublinhado dos links */
+  }
+  a:hover {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+  }
+
+  ul, li {
+    text-align: left;
+  }
+
+</style>
+</head>
+<body>
+  <br><br><br><br><br><br><br><br><br><br><br>
+  <div class="container">
+    <div class="translucent-div">
+      <center>
+        <img class="profile-image" src="my_avatar.png" alt="my avatar" width="200px" height="200px">
+        <p class="text-below-image">Lalo Araújo</p>
+        <ul>
+          <li>Estudante de Análise e Desenvolvimento de Sistemas.</li>
+          <li>Colaborador do Projeto Fedora.</li>
+          <li>Voluntário da comunidade NodeBR.</li>
+          <li>Cristão.</li>
+          <li>Tolkienista.</li>
+        </ul>
+        <p>Minhas redes sociais:</p>
+        <a href="https://linkedin.com/in/lalocodes"><ion-icon name="logo-linkedin"></ion-icon></a>
+        <a href="https://twitter.com/lalocodes"><ion-icon name="logo-twitter"></ion-icon></a>
+        <a href="https://instagram.com/lalocodes"><ion-icon name="logo-instagram"></ion-icon></a>
+        <a href="https://dev.to/lalocodes"><img src="./dev.svg" width="18px" height="18px"></a>
+    </div>
+
+  
+    <div class="content-column">
+      <strong><p>Graduando em Análise e Desenvolvimento de Sistemas pela Descomplica UniAmérica Centro Universitário.</p>
+      <p>Eu falo de linguagens de programação, software livre e sobre criar soluções para seres humanos baseadas nas tecnologias que dispomos.
+      Porque no final das contas, a tecnologia é sobre isso - ajudar as pessoas a resolver os problemas do seu dia-a-dia.</p> 
+      </p>
+      <p>Linguagens de programação preferidas:</p>
+      <ul class="programming-languages">
+        <li>Node.js     <img src="./nodejs.svg" width="20px" height="20px"></li>
+        <li>Java     <img src="./java.svg" width="20px" height="20px"></li>
+        <li>Python     <img src="./python.svg" width="20px" height="20px"></li>
+        <li>Lua     <img src="./lua.svg" width="20px" height="20px"></li>
+        <li>Ruby     <img src="./ruby.svg" width="20px" height="20px"></li>
+      </ul></strong>
+  </div>
+  </div>
+  <div class="footer">
+    Desenvolvido por Lalo Araújo &copy; 2023 Todos os direitos reservados.
+  </div>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
