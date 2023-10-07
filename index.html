@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+  <title>Apresentação Lalo Araújo</title>
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-32x32.png">
+
+  <style>
+    .datetime-bar {
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      text-align: center;
+      font-size: 12px;
+    }
+
+
+    body {
+      font-family: 'Comfortaa', cursive;
+      margin: 0;
+      padding: 0;
+      background-image: url('background.png');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      max-width: 1000px;
+      margin: 0 auto;
+      background-color: rgba(128, 139, 150, 0.55);
+
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .translucent-div {
+      background-color: rgba(0, 0, 0, 0.55);
+      color: white;
+      padding: 20px;
+      text-align: left;
+      border-radius: 10px 0 0 10px;
+      flex: 1;
+    }
+
+    .profile-column {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .content-column {
+      flex: 1;
+      padding: 20px;
+      border-radius: 0 10px 10px 0;
+    }
+
+    .footer {
+      font-size: 12px;
+      background-color: rgba(0, 0, 0, 0.5);
+      color: white;
+      text-align: center;
+      padding: 10px;
+      border-radius: 0 0 10px 10px;
+      margin-top: auto;
+      /* Adicione essa linha para posicionar o footer no final do container */
+    }
+
+    .programming-languages li {
+      display: flex;
+      align-items: center;
+      /* Alinhar verticalmente as imagens */
+      margin-bottom: 5px;
+      /* Adicionar espaço entre as linguagens */
+    }
+
+    .social {
+      display: flex;
+      align-items: center;
+      /* Alinhar verticalmente as imagens */
+      margin-bottom: 5px;
+      /* Adicionar espaço entre as linguagens */
+    }
+
+    .text-below-image {
+      font-family: 'Comfortaa', cursive;
+      font-size: 24px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    a {
+      color: inherit;
+      /* Herda a cor do elemento pai (nesse caso, texto normal) */
+      text-decoration: none;
+      /* Remove o sublinhado dos links */
+    }
+
+    a:hover {
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    }
+
+    ul,
+    li {
+      text-align: left;
+    }
+
+    #textinho {
+      text-align: justify;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="datetime-bar">
+    <p id="local-datetime"></p>
+  </div>
+  <br><br><br><br><br><br><br>
+  <div class="container">
+    <div class="translucent-div">
+      <center>
+        <img class="profile-image" src="my_avatar.png" alt="Meu avatar" width="200px" height="200px">
+        <p class="text-below-image">Lalo Araujo</p>
+        <ul>
+          <li>I'm a christian;</li>
+          <li>I'm a geek too;</li>
+          <li>I'm venturing into the world of cybersecurity;</li>
+          <li>In literature, I like so much of J. R. R. Tolkien, C. S. Lewis and Dostoevsky works;</li>
+          <li>I studied Philosophy and Mathematics before.</li>
+        </ul>
+        <img src="./line.png" width="450px" height="1px"><br>
+        <p>You can find me here:</p>
+        <a href="https://linkedin.com/in/l4l0s3c"><ion-icon name="logo-linkedin"></ion-icon></a>
+        <a href="https://twitter.com/l4l0s3c"><ion-icon name="logo-twitter"></ion-icon></a>
+        <a href="https://instagram.com/l4l0s3c"><ion-icon name="logo-instagram"></ion-icon></a>
+        <a href="https://dev.to/l4l0s3c"><img src="./dev.svg" width="18px" height="18px"></a>
+        <a href="https://github.com/l4l0s3c"><ion-icon name="logo-github"></a>
+    </div>
+
+
+    <div class="content-column">
+      <strong>
+        <p id="textinho">I'm a undergraduate student in Systems Analysis and Development at Descomplica UniAmérica
+          Centro Universitário.
+          Lately I discovered this fascinating world of cybersecurity and decided to become a professional in this area,
+          more specifically in binary reverse engineering and malware analysis.
+          There is so much to learn and I am excited with this amazing knowledge trail!</p>
+      </strong>
+    </div>
+  </div>
+  <div class="footer">
+    Developed by Lalo Araujo &copy; 2023 All rights reserved.
+  </div>
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script>
+    function updateDateTime() {
+      const dateTimeElement = document.getElementById('local-datetime');
+      const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric', timeZoneName: 'short' };
+      const localDateTime = new Date().toLocaleDateString('en-US', options);
+      dateTimeElement.textContent = "Today is " + localDateTime;
+    }
+
+    setInterval(updateDateTime, 1000); // Atualizar a cada segundo
+  </script>
+
+</body>
+
+</html>
